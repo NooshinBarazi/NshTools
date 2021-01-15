@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hoper</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <h2 id="title">Nsh Tools</h2>
+        <a href="Calculator.html">Calculator</a><br>
+        <a href="Stars.html">Stars</a><br />
+        <a href="Events.html">Events</a>
+        <a href="Hop.html">Hoper</a>
+    </div>
+
+    <div class="main">
+        <div class="rowhead">
+            <header id="head">
+                <nav>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="container">
+            <input type="text" id="num">
+            <button id="plus" onclick="plusfunction(); multiplesof()">+</button>
+            <button id="minus" onclick="minusfunction(); multiplesof()">-</button>
+            <p id="demo"></p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="clear"></div>
+        <div class="rowfoot">
+            <footer id="foot" class="clear">
+                <p>Create by noobari</p>
+            </footer>
+        </div>
+    </div><!--main-->
+
+    <script>
+
+        function multiplesof(){
+            var x = document.getElementById('num').value
+                if(x % 7 == 0){
+                    document.getElementById('demo').innerHTML = 'hope'
+                }
+            else{
+                    document.getElementById('demo').innerHTML = ' '
+                }
+        }
+
+        var x = document.getElementById('num')
+        function plusfunction(){
+            var n = parseInt(x.value)
+            n++
+            document.getElementById('num').value = n
+        }
+
+        function minusfunction(){
+            var n = parseInt(x.value)
+            n--
+            document.getElementById('num').value = n
+        }
+    </script>
+
+
+<br><br><br><br><br>
+</body>
+</html>

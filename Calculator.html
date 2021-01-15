@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <h2 id="title">Nsh Tools</h2>
+        <a href="Calculator.html">Calculator</a><br>
+        <a href="Stars.html">Stars</a><br />
+        <a href="Events.html">Events</a>
+        <a href="Hop.html">Hoper</a>
+    </div>
+
+    <div class="main">
+        <div class="rowhead">
+            <header id="head">
+                <nav>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="container">
+            num 1 : <input type="text" id="num1" style="width: 65px"><br><br>
+            num 2 : <input type="text" id="num2" style="width: 65px"><br><br>
+            <button onclick="result('1')">+</button>
+            <button onclick="result('2')">-</button>
+            <button onclick="result('3')">*</button>
+            <button onclick="result('4')">/</button>
+            <p id="demo"></p>
+        </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="clear"></div>
+    <div class="rowfoot">
+        <footer id="foot" class="clear">
+            <p>Create by noobari</p>
+        </footer>
+    </div>
+    </div><!--main-->
+
+    <script>
+        function result(choice){
+            var x = parseInt(document.getElementById('num1').value);
+            var y = parseInt(document.getElementById('num2').value);
+            var c = choice;
+            var r;
+            switch (c){
+                case '1':
+                    r = x + y;
+                    break;
+                case '2':
+                    r = x - y;
+                    break;
+                case '3':
+                    r = x * y;
+                    break;
+                case '4':
+                    r = x / y;
+                    break;
+                default:
+                    break;
+            }
+
+            document.getElementById('demo').innerHTML = "Result is:" + " " + r
+        }
+    </script>
+
+</body>
+</html>

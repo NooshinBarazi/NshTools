@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidenav">
+        <h2 id="title">Nsh Tools</h2>
+        <a href="Home.html">Home</a>
+        <a href="Calculator.html">Calculator</a><br>
+        <a href="Stars.html">Stars</a><br />
+        <a href="Events.html">Events</a>
+    </div>
+
+    <div class="container">
+        Enter your name: <input type="text" id="fname" onblur="blurfunction()" onfocus="focusfunction()"
+                          onchange="changefuction()" onkeyup="keyupfunction()" onkeydown="keydownfunction()"
+                          onmousedown="mousedownfunction()" onmouseup="mouseupfunction()" onmouseover="mouseoverfunction()">
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        function blurfunction(){
+            document.getElementById('fname').style.backgroundColor = "pink"
+            document.getElementById('demo').innerHTML = 'When you leave the input field sets the background color to pink'
+        }
+        function focusfunction(){
+            document.getElementById('fname').style.backgroundColor = "lightblue"
+            document.getElementById('demo').innerHTML = 'When you enter the input field sets the background color to lightblue'
+        }
+        function changefuction(){
+            var x = document.getElementById('fname')
+            x.value = x.value.toUpperCase()
+            document.getElementById('demo').innerHTML = 'When you leave the input field the input text to upper case'
+        }
+        function keyupfunction(){
+            document.getElementById('demo').style.color = "red"
+            document.getElementById('demo').innerHTML = 'When you pressed the key changed the color to red'
+        }
+        function keydownfunction(){
+            document.getElementById('demo').style.color = "blue"
+            document.getElementById('demo').innerHTML = 'When you relesed the key changed the color to blue'
+        }
+        function mousedownfunction(){
+            document.getElementById('fname').style.fontSize = "36px"
+            document.getElementById('demo').innerHTML = 'When the mouse button pressed down chaneged the fontsize to 36px'
+        }
+        function mouseupfunction(){
+            document.getElementById('fname').style.fontSize = "18px"
+            document.getElementById('demo').innerHTML = 'When relesed the mouse button chaneged the fontsize to 18px'
+        }
+        function mouseoverfunction(){
+            document.getElementById('fname').style.borderColor = "yellow"
+            document.getElementById('demo').innerHTML = 'When the mouse is moved over the input sets the border color to yellow'
+        }
+    </script>
+
+</body>
+</html>
